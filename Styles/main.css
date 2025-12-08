@@ -19,16 +19,14 @@ body{
 }
 #texte_bannière{
     position: absolute;
-    top: 20%;            /* centre vertical */
-    left: 0%;           /* centre horizontal */
+    top: 25%;            /* centre vertical */
+    left: 30%;           /* centre horizontal */
+    bottom: 10%;
 
     color: white;
     mix-blend-mode: difference;
     z-index: 3;
-    border: solid;
-    border-color: blue;
     font-size: 300%;
-    position: relative;
     text-align: center;
     font-size: 5vh;      /* vw = responsive */
     z-index: 10;
