@@ -36,12 +36,13 @@ body{
 }
 
 .navigation{
-    z-index: 5;
+    z-index: 15;
     border: solid;
     background-color: rgb(252, 235, 235);
     text-align: center;
     position: absolute;
     bottom: -5%;
+    left:5%;
     width: 15%;
     font-size: 3vh ;
     padding: 1%;
