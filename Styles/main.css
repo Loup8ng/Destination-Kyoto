@@ -1,69 +1,88 @@
 body{
-    background-color: rgb(207, 204, 204); /*fond jaune*/
+    background-color: rgb(207, 204, 204);
     margin: 3%;
 }
 
-#banniere{
+/*Bannière*/
+.container_banniere{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+}
+
+#banniere {
+    position: relative; /* nécessaire pour positionner le texte dessus */
     width: 100%;
     background-color: rgb(252, 235, 235);
     border: solid;
-    z-index: 1;
+    display: block;
     box-shadow: 5px 2px 5px rgb(51, 51, 51);
     border-radius: 30px;
-    padding:1%;
+    padding: 0; /* retirer le padding qui décale l'image */
+    overflow: hidden; /* empêche les débordements */
 }
-#banniere img{
+
+#banniere img {
     width: 100%;
     height: auto;
-
+    display: block;
+    border-radius: 30px;
 }
-#texte_bannière{
+#texte_banniere {
     position: absolute;
-    top: 25%;            /* centre vertical */
-    left: 30%;           /* centre horizontal */
-    bottom: 10%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     color: white;
-    mix-blend-mode: difference;
-    z-index: 3;
-    font-size: 300%;
+    font-size: 8vw; /* responsive ! */
+    font-family: fantasy;
+    font-style: italic;
+    font-weight: bold;
     text-align: center;
-    font-size: 5vh;      /* vw = responsive */
-    z-index: 10;
-    mix-blend-mode: difference;
+    text-shadow: 2px 2px 6px black;
+    white-space: nowrap; /* évite les retours à la ligne */
 }
 
+/*conteneur nav et contenu*/
+.main{
+    display: flex;
+    gap: 2%;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/*Navigation*/
 .navigation{
-    z-index: 15;
+    flex: 0.3;
     border: solid;
-    background-color: rgb(252, 235, 235);
-    text-align: center;
-    position: fixed;
-    left:3%;
-    top: 66%;
-    width: 15%;
-    font-size: 3vh ;
+    background: rgb(252, 235, 235);
     padding: 1%;
-    box-shadow: 5px 2px 5px rgb(51, 51, 51);
+    height: 50%;
     border-radius: 30px;
+    align-items: center;
+    box-shadow: 5px 2px 5px rgb(51, 51, 51);
 }
 
+.navigation p{
+    font-size: 2.5vw;
+    align: center;
+}
+
+/*Contenu*/
 .contenu{
-    z-index: 2 ;
+    flex: 1;
     border: solid;
-    background-color: rgb(252, 235, 235);
-    text-align: center;
-    position: absolute;
-    left: 21%;
-    top: 66%;
-    width: 76%;
-    font-size: 100% ;
+    background: rgb(252, 235, 235);
     padding: 1%;
-    box-shadow: 5px 2px 5px rgb(51, 51, 51);
     border-radius: 30px;
+    align-items: center;
+    box-shadow: 5px 2px 5px rgb(51, 51, 51);
+
 }
 .contenu h1{
-    font-size: 350%;
+    font-size: 300%;
     text-decoration: underline;
 }
 .contenu h2{
@@ -71,6 +90,6 @@ body{
     text-decoration: underline;
 }
 .contenu p{
-    font-size: 120%;
+    font-size: 175%;
 
 }
