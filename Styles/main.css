@@ -57,7 +57,7 @@ body{
 
 /*Navigation*/
 .navigation{
-    flex: 0.3;
+    flex: 0.2;
     border: solid;
     background: rgb(252, 235, 235);
     padding: 1%;
@@ -67,8 +67,16 @@ body{
     box-shadow: 5px 2px 5px rgb(51, 51, 51);
 }
 
-.navigation p{
+.navigation .box{
     font-size: 1vw;
+    color: black;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: rgb(233,177,205,0.8);
+}
+
+#nounderline{
+    text-decoration: none;
 }
 
 /*Contenu*/
