@@ -1,7 +1,8 @@
 /* --- GENERAL --- */
 body{
-    background-color: rgb(207, 204, 204);
+    background-color: rgb(233,177,205,0.8);
     margin: 3%;
+    
 }
 
 /*Bannière*/
@@ -82,26 +83,18 @@ body{
 
 }
 .contenu h1{
-    font-size: 300%;
-    text-decoration: underline;
-}
-.contenu h2{
     font-size: 200%;
     text-decoration: underline;
 }
-.contenu p{
-    font-size: 175%;
-
-/* Colonne droite : navigation */
-.navigation{
-    flex: 1;
-    border: solid;
-    background-color: rgb(252, 235, 235);
-    padding: 20px;
-    text-align: center;
-    box-shadow: 5px 2px 5px rgb(51, 51, 51);
-    border-radius: 30px;
+.contenu h2{
+    font-size: 150%;
+    text-decoration: underline;
 }
+.contenu p{
+    font-size: 100%;
+}
+/* Colonne droite : navigation */
+
 
 /* --- RESPONSIVE SMARTPHONE --- */
 @media (max-width: 900px){
