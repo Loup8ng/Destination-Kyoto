@@ -23,7 +23,29 @@
             <div class="contenu">
                 <h1>Formulaire d'avis</h1>
                 <form method="post" action="traitement.php">
-                    
+                    <fieldset>
+                        <legend>Informations personnelles</legend>
+                        
+                            <label for="nom">Nom :</label>
+                            <input type="text" name="nom" id="nom"  placeholder="Ex : Callot" maxlength="30" required autofocus> <br>
+                            
+                            <label for="prenom">Prénom :</label>
+                            <input type="text" name="prenom" id="prenom"  placeholder="Ex : Jacques" maxlength="30" required> <br>
+
+                            <label for="adresse_mail">Adresse e-mail :</label>
+                            <input type="text" name="adresse_mail" id="adresse_mail"  placeholder="Ex : Jacques.Callot@loria.fr" maxlength="30" required> <br>
+                    </fieldset>
+                    <fieldset>
+                        <legend> Expérience </legend>
+                            Votre expérience : <br>
+                            <input type="radio" name="avis" value="Bonne" > Bonne <br>
+                            <input type="radio" name="avis" value="Mauvaise"> Mauvaise <br>
+
+                            <label for="autre_compétences">Dites nous pourquoi</label><br>
+                            <textarea name="pourquoi_avis" id="pourquoi_avis" rows="10" cols="40"></textarea>
+                    </fieldset>
+                    <input type="reset" value="Resommencer">
+                    <input type="submit">
                 </form>
             </div>
         </div>
