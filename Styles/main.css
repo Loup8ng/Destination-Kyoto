@@ -14,17 +14,18 @@ body{
 }
 
 #banniere {
-    position: relative; /* nécessaire pour positionner le texte dessus */
-    width: 100%;
+    position: relative; /*position relative*/
+    width: 100%; /*taille 100ù de la div*/
     background-color: rgb(252, 235, 235);
     border: solid;
-    display: block;
+    display: block; /* pour dire que c'est un block (une sous div responsive)*/
     box-shadow: 5px 2px 5px rgb(51, 51, 51);
     border-radius: 30px;
     padding: 0; /* retirer le padding qui décale l'image */
     overflow: hidden; /* empêche les débordements */
 }
 
+/*dimentions et attributs de la bannière*/
 #banniere img {
     width: 100%;
     height: auto;
@@ -32,14 +33,15 @@ body{
     border-radius: 30px;
 }
 #texte_banniere {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute; /* position en absolute*/
+    top: 30%; /*décalage de 30% du bord*/
+    left: 50%; /*décalage de 50% de la gauche*/
+    transform: translate(-50%, -50%); /* position toujours centré (plus précis que top et left)*/
 
     color: white;
-    font-size: 8vw; /* responsive ! */
-    font-family: fantasy;
+    font-size: 8vw; /*taille du texte qui s'addapte à la taille de l'écran (plus précit que les % )*/
+    /* Mise en forme de l'écriture*/
+    font-family: fantasy; 
     font-style: italic;
     font-weight: bold;
     text-align: center;
@@ -47,7 +49,7 @@ body{
     white-space: nowrap; /* évite les retours à la ligne */
 }
 
-/*conteneur nav et contenu*/
+/*conteneur nav et contenu (la grande div qui contient tout)*/
 .main{
     display: flex;
     gap: 2%;
@@ -57,10 +59,12 @@ body{
 
 /*Navigation*/
 .navigation{
-    flex: 0.2;
+    flex: 0.2; /* taille de la div dans la grande div*/
+
+    /* estétique de la div*/
     border: solid;
     background: rgb(252, 235, 235);
-    padding: 1%;
+    padding: 1%; 
     height: 50%;
     border-radius: 30px;
     align-items: center;
@@ -68,7 +72,7 @@ body{
 }
 
 .navigation .box{
-    font-size: 1vw;
+    font-size: 1vw; /* taille de l'écriture en fonction de la taille de l'écran*/
     color: black;
     border: 1px solid black;
     border-radius: 30px;
@@ -81,7 +85,7 @@ body{
 
 /*Contenu*/
 .contenu{
-    flex: 1;
+    flex: 1; /*taille de la div dans la plus grande*/
     border: solid;
     background: rgb(252, 235, 235);
     padding: 1%;
@@ -101,15 +105,3 @@ body{
 .contenu p{
     font-size: 100%;
 }
-
-/* --- RESPONSIVE SMARTPHONE --- */
-@media (max-width: 900px){
-    .layout{
-        flex-direction: column; /* empile les blocs */
-    }
-
-    #texte_bannière{
-        font-size: 8vw;
-    }
-}
-
